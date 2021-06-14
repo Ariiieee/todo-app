@@ -11,6 +11,10 @@ filterOption.addEventListener('click', filterTodos);
 
 function addTodo (event) {
   event.preventDefault();
+  if (todoInput.value === '') {
+    return false
+  }
+
 
   const todoDiv = document.createElement('div');
   todoDiv.classList.add('todo'); //this adds a class with the name of the class called 'todo'
